@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page setup and links-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Peripera</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="nav-right-container">
+            <!-- Menu links -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="about.html" class="nav-link current">About Us</a></li>
+            </ul>
+            <!-- Sign up button -->
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+            <!-- Icons for cart & profile -->
+            <div class="nav-icons">
+                <a href="javascript:void(0)" class="cart-icon-wrapper" onclick="openCartModal()">
+                    <img src="cart.png" alt="Cart">
+                    <span id="cart-count">0</span> <!-- Cart item count -->
+                </a>
+                <a href="signup.html">
+                    <img src="profile.png" alt="Profile">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero banner with slider -->
+    <section class="peripera-hero-banner">
+        <div class="hero-inner-box" id="info-rectangle">
+            <!-- Left image -->
+            <div class="hero-decor decor-left">
+                <img src="31.png" alt="Peripera Model">
+            </div>
+
+            <!-- Main text -->
+            <div class="hero-text-content" id="text-container">
+                <h1>PeriPera</h1>
+                <h2>Unlock Your Inner Pretty Pretty</h2>
+                <p>Innovative K-Beauty that brings joy and confidence to your everyday through vibrant colors and unique textures.</p>
+            </div>
+
+            <!-- Right image -->
+            <div class="hero-decor decor-right">
+                <img src="30.png" alt="Ink Tint Serum">
+            </div>
+        </div>
+
+        <!-- Slider dots -->
+        <div class="hero-dots">
+            <button class="active" onclick="changeInfo(0)"></button>
+            <button onclick="changeInfo(1)"></button>
+            <button onclick="changeInfo(2)"></button>
+            <button onclick="changeInfo(3)"></button>
+        </div>
+    </section>
+
+    <!-- Main about us content -->
+    <main class="about-main-content">
+        <!-- The brand's story section -->
+        <div class="journey-section">
+            <h2>Our Story</h2>
+            <p>PeriPera Cosmetics is a fun, trendsetting Korean makeup brand that has gained a cult following for its innovative, high-quality products and fresh, youthful branding. Founded in 2005, PeriPera takes its name from the Korean phrase “peri-pera” meaning <strong>“pretty pretty.”</strong></p>
+           
+            <p>The brand is known for bringing a sense of joy and creativity to makeup. PeriPera’s products feature bold, vibrant colors, unique textures, and whimsical packaging designs inspired by things like fruits, toys, and fashion illustrations. However, beyond the playful aesthetics, their formulas utilize advanced Korean skincare technology and skin-loving ingredients.</p>
+
+            <img src="27.png" alt="Peripera Collection" class="story-img">
+
+            <h2>Iconic Innovation</h2>
+            <p>Some of PeriPera’s most popular cult products include the Ink Velvet Lip Tints, Velvet Cheek Blushes, and Ink Airy Velvet Lip Tints which provide intense, long-wearing pigment with a velvety finish. They’re also known for fun, innovative makeup like the Peri’s Tint Water lip gelées and Lash Tiny Monster mascaras.</p>
+
+            <p>While keeping things playful, PeriPera is also committed to clean, eco-conscious beauty using natural botanicals, avoiding controversial ingredients, and implementing sustainable packaging initiatives. As PeriPera continues to rapidly expand worldwide, it brings a fresh sense of excitement and self-expression to the makeup world.</p>
+        </div>
+
+        <!-- Values and sidebar section -->
+        <div class="values-grid-wrapper">
+            <!-- Brand values -->
+            <div class="values-display">
+                <div class="aesthetic-card"><h3>Innovation</h3></div>
+                <div class="aesthetic-card"><h3>Youthful</h3></div>
+                <div class="aesthetic-card"><h3>Eco-Beauty</h3></div>
+            </div>
+
+            <!-- Additional info -->
+            <p class="sidebar-text">
+                With flagship stores across Asia and a strong social media presence, PeriPera has cultivated a devoted Gen Z and millennial following drawn to the brand’s energetic spirit. The company frequently collaborates with artists and global brands to dream up limited edition products.
+            </p>
+
+            <!-- Sidebar image -->
+            <img src="29.png" alt="Ink Velvet Lineup" class="sidebar-img">
+
+            <!-- Polaroid design decoration -->
+            <div class="polaroid-decoration">
+                <img src="28.png" alt="Ink Airy Stick">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <p>Copyright © 2026 The PeriPera Cosmetics.</p>
+    </footer>
+
+    <!-- JavaScript file -->
+    <script src="index.js"></script>
+</body>
+</html> 
