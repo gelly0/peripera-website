@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page setup and links-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Peripera</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="nav-right-container">
+            <!-- Menu links -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="shop.html" class="nav-link current">Shop</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+            </ul>
+            <!-- Sign up button -->
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+            <!-- Icons for cart & profile -->
+            <div class="nav-icons">
+                <a href="javascript:void(0)" class="cart-icon-wrapper" onclick="openCartModal()">
+                    <img src="cart.png" alt="Cart">
+                    <span id="cart-count">0</span> <!-- Cart item count -->
+                </a>
+                <a href="signup.html">
+                    <img src="profile.png" alt="Profile">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main shop content -->
+    <div class="shop-container">
+        <!-- Product card 1 -->
+        <div class="shop-grid">
+            <div class="shop-card">
+                <div class="shop-image"><img src="11.png" class="img-tall"></div>
+                <h3 class="product-title">Ink Mood Glowy Tint</h3>
+                <p class="shop-desc">Lip-Plumping, Naturally Moisturizing, Lightweight, Glow-Boosting, Long-Lasting, Comfortable, Non-Sticky, No White Film</p>
+                <div class="shop-actions">
+                    <span class="shop-price-pill">AED 57.00</span>
+                    <button class="add-to-cart-btn" data-product-id="glowy-01" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 2 -->
+            <div class="shop-card">
+                <div class="shop-image"><img src="12.png" class="img-tall"></div>
+                <h3 class="product-title">Ink Mood Glowy Tint</h3>
+                <p class="shop-desc">Lip-Plumping, Naturally Moisturizing, Lightweight, Glow-Boosting, Long-Lasting, Comfortable, Non-Sticky, No White Film</p>
+                <div class="shop-actions">
+                    <span class="shop-price-pill">AED 50.46</span>
+                    <button class="add-to-cart-btn" data-product-id="glowy-02" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 3 -->
+            <div class="shop-card">
+                <div class="shop-image"><img src="13.png" class="img-tall"></div>
+                <h3 class="product-title">Ink Mood Glowy Tint</h3>
+                <p class="shop-desc">Lip-Plumping, Naturally Moisturizing, Lightweight, Glow-Boosting, Long-Lasting, Comfortable, Non-Sticky, No White Film</p>
+                <div class="shop-actions">
+                    <span class="shop-price-pill">AED 57.00</span>
+                    <button class="add-to-cart-btn" data-product-id="glowy-03" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 4 -->
+            <div class="shop-card">
+                <div class="shop-image"><img src="14.png" class="img-tall"></div>
+                <h3 class="product-title">Ink Mood Glowy Tint</h3>
+                <p class="shop-desc">Lip-Plumping, Naturally Moisturizing, Lightweight, Glow-Boosting, Long-Lasting, Comfortable, Non-Sticky, No White Film</p>
+                <div class="shop-actions">
+                    <span class="shop-price-pill">AED 55.00</span>
+                    <button class="add-to-cart-btn" data-product-id="glowy-04" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 5 (Eye shadow palette) -->
+            <div class="shop-card">
+                <div class="shop-image"><img src="15.png"></div>
+                <h3 class="product-title">Ink Pocket Shadow Palette</h3>
+                <p class="shop-desc">Eyeshadow Quads, Creamy Formula, Blendable Matte & Shimmer Shades, Easy to Apply</p>
+                <div class="shop-actions">
+                    <span class="shop-price-pill">AED 84.98</span>
+                    <button class="add-to-cart-btn" data-product-id="shadow-palette" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 6 -->
+            <div class="shop-card">
+                <div class="shop-image"><img src="16.png" class="img-tall"></div>
+                <h3 class="product-title">Ink Mood Glowy Tint</h3>
+                <p class="shop-desc">Lip-Plumping, Naturally Moisturizing, Lightweight, Glow-Boosting, Long-Lasting, Comfortable, Non-Sticky, No White Film</p>
+                <div class="shop-actions">
+                    <span class="shop-price-pill">AED 47.00</span>
+                    <button class="add-to-cart-btn" data-product-id="glowy-05" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 7 -->
+            <div class="shop-card">
+                <div class="shop-image"><img src="17.png" class="img-tall"></div>
+                <h3 class="product-title">Ink Mood Glowy Tint</h3>
+                <p class="shop-desc">Lip-Plumping, Naturally Moisturizing, Lightweight, Glow-Boosting, Long-Lasting, Comfortable, Non-Sticky, No White Film</p>
+                <div class="shop-actions">
+                    <span class="shop-price-pill">AED 47.00</span>
+                    <button class="add-to-cart-btn" data-product-id="glowy-06" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 8 -->
+            <div class="shop-card">
+                <div class="shop-image"><img src="18.png"></div>
+                <h3 class="product-title">Ink Mood Glowy Tint</h3>
+                <p class="shop-desc">Lip-Plumping, Naturally Moisturizing, Lightweight, Glow-Boosting, Long-Lasting, Comfortable, Non-Sticky, No White Film</p>
+                <div class="shop-actions">
+                    <span class="shop-price-pill">AED 50.46</span>
+                    <button class="add-to-cart-btn" data-product-id="glowy-07" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 9 (Ink Velvet tint) -->
+            <div class="shop-card">
+                <div class="shop-image"><img src="19.png" alt="Ink Velvet 17"></div>
+                <h3 class="product-title">Peripera Ink the Velvet Lip Tint</h3>
+                <p class="shop-desc">High Pigment Color, Longwear, Weightless, Not Animal Tested, Gluten-Free, Paraben-Free</p>
+                <div class="shop-actions">
+                    <span class="shop-price-pill">AED 59.99</span>
+                    <button class="add-to-cart-btn" data-product-id="velvet-17" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 10 (Another Ink Velvet tint) -->
+            <div class="shop-card">
+                <div class="shop-image"><img src="20.png" alt="Ink Velvet 21"></div>
+                <h3 class="product-title">Peripera Ink the Velvet Lip Tint</h3>
+                <p class="shop-desc">High Pigment Color, Longwear, Weightless, Not Animal Tested, Gluten-Free, Paraben-Free</p>
+                <div class="shop-actions">
+                    <span class="shop-price-pill">AED 59.99</span>
+                    <button class="add-to-cart-btn" data-product-id="velvet-21" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 11 (Jellable tint) -->
+            <div class="shop-card">
+                <div class="shop-image"><img src="21.png" alt="Ink Jellable Tint" class="img-tall"></div>
+                <h3 class="product-title">Peripera Ink Jellable Tint</h3>
+                <p class="shop-desc">Lip Stain, Korean Lip Tint, High Pigment Color, Longwear, Weightless, Moisturizing, Hydrating</p>
+                <div class="shop-actions">
+                    <span class="shop-price-pill">AED 65.18</span>
+                    <button class="add-to-cart-btn" data-product-id="jellable-01" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 12 (Slip on lip) -->
+            <div class="shop-card">
+                <div class="shop-image"><img src="22.png" alt="Slip On My Lip"></div>
+                <h3 class="product-title">Peripera Slip On My Lip</h3>
+                <p class="shop-desc">Long-Lasting Shine Slim Lipstick, Slick Lip Crayon, Satin, Matte, Glowy Korean Lip, K Beauty</p>
+                <div class="shop-actions">
+                    <span class="shop-price-pill">AED 37.00</span>
+                    <button class="add-to-cart-btn" data-product-id="slip-on-01" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 13 (Peel off tint) -->
+            <div class="shop-card">
+                <div class="shop-image"><img src="23.png" alt="Ink Peel Off"></div>
+                <h3 class="product-title">Peripera Ink Peel Off Lip Stain</h3>
+                <p class="shop-desc">Long Lasting, Transfer-Proof, Waterproof Korean Lip Tint with Color-Changing Peel-Off Formula</p>
+                <div class="shop-actions">
+                    <span class="shop-price-pill">AED 26.00</span>
+                    <button class="add-to-cart-btn" data-product-id="peel-off-01" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 14 (Cheek blush) -->
+            <div class="shop-card">
+                <div class="shop-image"><img src="24.png" alt="Cheek Blush"></div>
+                <h3 class="product-title">Pure Blushed Sunshine Cheek Blush</h3>
+                <p class="shop-desc">Matte Natural Sheer Glow, Glowy Finish, Natural-Looking Finish (027 Strawberry Pink, One)</p>
+                <div class="shop-actions">
+                    <span class="shop-price-pill">AED 59.72</span>
+                    <button class="add-to-cart-btn" data-product-id="blush-01" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 15 (Freckle pen) -->
+            <div class="shop-card">
+                <div class="shop-image"><img src="25.png" alt="Freckle Pen" class="img-tall"></div>
+                <h3 class="product-title">Peripera Freckle Pen, Natural Sun-Kissed</h3>
+                <p class="shop-desc">Long Lasting, Smudge-Proof Faux Freckles with Precision Dot Tip, Buildable K-Beauty Freckle Makeup Pen</p>
+                <div class="shop-actions">
+                    <span class="shop-price-pill">AED 37.00</span>
+                    <button class="add-to-cart-btn" data-product-id="freckle-01" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 16 (Syrupy tok) -->
+            <div class="shop-card">
+                <div class="shop-image"><img src="26.png" alt="Syrupy Tok"></div>
+                <h3 class="product-title">Peripera Syrupy Tok</h3>
+                <p class="shop-desc">Liquid Blush, Dewy Finish and Hydrates All day, Soft Velvet Texture Face Cheek Tint</p>
+                <div class="shop-actions">
+                    <span class="shop-price-pill">AED 94.96</span>
+                    <button class="add-to-cart-btn" data-product-id="syrupy-02" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- Shopping cart modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Your Shopping Cart</h2>
+                <button class="close-cart" onclick="closeCartModal()">&times;</button>
+            </div>
+            <div class="cart-modal-body">
+                <!-- Where cart items appear -->
+                <div id="cart-items-container" class="cart-items-container"></div>
+                <!-- Empty cart message -->
+                <div id="cart-empty-message" class="empty-message-style">
+                    Your cart is empty.<br>
+                    <a href="javascript:void(0)" onclick="closeCartModal()">Continue Shopping</a>
+                </div>
+                <!-- Cart summary -->
+                <div class="cart-summary-modal" id="cart-summary-modal">
+                    <div class="summary-line">
+                        <span>Subtotal:</span>
+                        <span id="cart-subtotal">AED 0.00</span>
+                    </div>
+                    <div class="summary-line grand-total">
+                        <span>Total:</span>
+                        <span id="cart-total">AED 0.00</span>
+                    </div>
+                    <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <p>Copyright © 2025 The PeriPera Cosmetics.</p>
+    </footer>
+
+    <!-- JavaScript file -->
+    <script src="index.js"></script>
+</body>
+</html>
