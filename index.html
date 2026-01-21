@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page setup and links-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Peripera</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="nav-right-container">
+            <!-- Menu links -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link current">Home</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+            </ul>
+            <!-- Sign up button -->
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+            <!-- Icons for cart & profile -->
+            <div class="nav-icons">
+                <a href="javascript:void(0)" class="cart-icon-wrapper" onclick="openCartModal()">
+                    <img src="cart.png" alt="Cart">
+                    <span id="cart-count">0</span> <!-- Cart item count -->
+                </a>
+                <a href="signup.html">
+                    <img src="profile.png" alt="Profile">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <div class="content-area">
+
+        <!-- Youtube background video -->
+        <div class="video-container">
+            <iframe 
+                class="responsive-iframe" 
+                src="https://www.youtube.com/embed/uiRcKpBGhhw?autoplay=1&mute=1&loop=1&controls=0&playlist=uiRcKpBGhhw" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Scrolling marquee -->
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span class="scrolling-text">BEST SELLERS BEST SELLERS BEST SELLERS BEST SELLERS</span>
+                <span class="scrolling-text" aria-hidden="true">BEST SELLERS BEST SELLERS BEST SELLERS BEST SELLERS</span>
+            </div>
+        </div>
+
+        <!-- Product grid -->
+        <div class="product-showcase">
+            <!-- Product card 1 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="01.png" alt="Ink the Velvet Lip Tint"> 
+                </div>
+                <h3 class="product-title">Ink the Velvet Lip Tint</h3>
+                <p class="product-description">High Pigment Color, Longwear, Weightless, Not Animal Tested, Gluten-Free, Paraben-Free</p>
+                <div class="product-actions">
+                    <span class="product-price">AED 59.99</span>
+                    <button class="add-to-cart-btn" data-product-id="ink-velvet-tint" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 2 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="02.png" alt="Peripera Ink Mood Glowy Tint"> 
+                </div>
+                <h3 class="product-title">Ink Mood Glowy Tint</h3>
+                <p class="product-description">Lip-Plumping, Naturally Moisturizing, Glow-Boosting, Long-Lasting, Non-Sticky</p>
+                <div class="product-actions">
+                    <span class="product-price">AED 39.00</span>
+                    <button class="add-to-cart-btn" data-product-id="ink-mood-glowy-tint" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 3 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="03.png" alt="Peripera Ink Airy Velvet Lip Tint"> 
+                </div>
+                <h3 class="product-title">Ink Airy Velvet Lip Tint</h3>
+                <p class="product-description">High-Pigmentation, Lightweight, Soft, Moisturizing, Not Animal Tested</p>
+                <div class="product-actions">
+                    <span class="product-price">AED 37.00</span>
+                    <button class="add-to-cart-btn" data-product-id="ink-airy-velvet-tint" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 4 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="04.png" alt="Peripera Syrupy Tok">
+                </div>
+                <h3 class="product-title">Peripera Syrupy Tok</h3>
+                <p class="product-description">Liquid Blush, Dewy Finish and Hydrates All day, Soft Velvet Texture</p>
+                <div class="product-actions">
+                    <span class="product-price">AED 94.96</span>
+                    <button class="add-to-cart-btn" data-product-id="peripera-syrupy-tok" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 5 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="05.png" alt="Peripera Ink Glasting Lip Gloss">
+                </div>
+                <h3 class="product-title">Ink Glasting Lip Gloss</h3>
+                <p class="product-description">Non-Sticky, Gloss Shine, 4XL Wand for Easy Application, Fuller Looking Lips</p>
+                <div class="product-actions">
+                    <span class="product-price">AED 34.00</span>
+                    <button class="add-to-cart-btn" data-product-id="ink-glasting-lip-gloss" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 6 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="06.png" alt="Peripera Ink Peel Off Lip Stain">
+                </div>
+                <h3 class="product-title">Ink Peel Off Lip Stain</h3>
+                <p class="product-description">Long Lasting, Transfer-Proof, Waterproof Korean Lip Tint with Peel-Off Formula</p>
+                <div class="product-actions">
+                    <span class="product-price">AED 26.00</span>
+                    <button class="add-to-cart-btn" data-product-id="ink-peel-off-lip-stain" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benefits section with flip cards -->
+        <section class="benefits-outer-container">
+            <div class="benefits-header">
+                <h2>Makeup should be a joyful form of self-expression</h2>
+                <p>Where joy meets high performance—each product is made to enhance creativity and uplift confidence.</p>
+            </div>
+
+            <!-- Flip cards grid -->
+            <div class="benefits-grid">
+                <!-- Flip card 1 -->
+                <div class="flip-card" onclick="this.classList.toggle('active')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="07.png" alt="Quality" class="benefit-icon">
+                            <h3>Quality Plants</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Carefully selected ingredients for safe, high-quality makeup.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flip card 2 -->
+                <div class="flip-card" onclick="this.classList.toggle('active')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="08.png" alt="Renovation" class="benefit-icon">
+                            <h3>Plant Renovation</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Refreshing plant extracts that revive and nourish your skin.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flip card 3 -->
+                <div class="flip-card" onclick="this.classList.toggle('active')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="09.png" alt="Seed" class="benefit-icon">
+                            <h3>Seed Supply</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Natural seed-based ingredients for gentle, effective formulas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flip card 4 -->
+                <div class="flip-card" onclick="this.classList.toggle('active')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="10.png" alt="Design" class="benefit-icon">
+                            <h3>Custom Design</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Thoughtfully designed makeup made to suit your unique style.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Shopping cart modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Your Shopping Cart</h2>
+                <button class="close-cart" onclick="closeCartModal()">&times;</button>
+            </div>
+            <div class="cart-modal-body">
+                <!-- Where cart items appear -->
+                <div id="cart-items-container" class="cart-items-container"></div>
+                <!-- Empty cart message -->
+                <div id="cart-empty-message" class="empty-message-style">
+                    Your cart is empty.<br>
+                    <a href="javascript:void(0)" onclick="closeCartModal()">Continue Shopping</a>
+                </div>
+                <!-- Cart summary -->
+                <div class="cart-summary-modal" id="cart-summary-modal">
+                    <div class="summary-line">
+                        <span>Subtotal:</span>
+                        <span id="cart-subtotal">AED 0.00</span>
+                    </div>
+                    <div class="summary-line grand-total">
+                        <span>Total:</span>
+                        <span id="cart-total">AED 0.00</span>
+                    </div>
+                    <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <p>Copyright © 2025 The PeriPera Cosmetics.</p>
+    </footer>
+
+    <!-- JavaScript file -->
+    <script src="index.js"></script>
+</body>
+</html>
